@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// Percent
+@function percent($px, $from) {
+  @return math.div($px, $from) * 100%;
+}
+
+// REM
+@function rem($px) {
+  @return math.div($px, 16) + rem;
+}
+
+// EM
+@function em($px, $current: 16) {
+  @return math.div($px, $current) + em;
+}
+
+@mixin no-select {
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+
+  -webkit-touch-callout: none; /* iOS Safari */
+}
