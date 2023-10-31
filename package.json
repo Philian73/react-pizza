@@ -1,15 +1,5 @@
 {
-  "name": "react-pizza",
   "author": "Nikolay Sulteev",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -31,5 +21,17 @@
     "stylelint": "^15.11.0",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
-  }
+  },
+  "name": "react-pizza",
+  "private": true,
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "format": "prettier --write src",
+    "lint": "eslint --fix src/**/*.{tsx,ts,jsx,js} --no-error-on-unmatched-pattern && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
+    "preview": "vite preview",
+    "tsc:watch": "tsc --watch"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }
